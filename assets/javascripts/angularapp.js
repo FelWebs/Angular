@@ -1,14 +1,6 @@
 /*globals angular*/
 
-var app = angular.module('myApp', [ui.router]);
-
-app.controller('myCtrl', function ($scope, $http) {
-    "use strict";
-    $http.get("./assets/javascripts/model.json")
-        .then(function(response) {
-            $scope.names = response.data;
-        });
-});
+var app = angular.module('myApp', ['ui.router']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     "use strict";
@@ -18,7 +10,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('forside', {
             url: '/forside',
-            templateUrl: '.assets/views/partial-forside.html'
+            templateUrl: './assets/views/partial-forside.html'
         })
 
         .state('kontakt', {
