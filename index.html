@@ -8,19 +8,15 @@
     <title>Document</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="assets/javascripts/angularapp.js"></script>
 </head>
 <body>
     <div ng-app="myApp" ng-controller="myCtrl">
-        <span ng-bind="firstName + ' ' + lastName">Fornavn Efternavn</span>
+        <p ng-repeat="name in names">{{ name.firstName + " " + name.lastName }}</p>
     </div>
 
 <script>
-    var app = angular.module('myApp', []);
 
-    app.controller('myCtrl', function ($scope) {
-        $scope.firstName= "Mikkel";
-        $scope.lastName= "Olsen";
-    })
 </script>
 </body>
 </html>
