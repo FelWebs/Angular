@@ -8,6 +8,7 @@ if ($_POST) {
     $stmt->bindParam(':title', $title, PDO::PARAM_STR);
     $title = $_POST['title'];
     $stmt->execute();
+    echo json_encode($stmt->fetchObject());
     Database::disconnect();
 }
 

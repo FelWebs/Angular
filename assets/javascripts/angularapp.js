@@ -23,14 +23,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 app.controller("forside", function ($scope, $http) {
     "use strict";
 
-    $http.get("./assets/javascripts/model.json")
+    $http.get({
+        method: 'POST',
+        url: './assets/php/model.php',
+        data: { title: 'Forside' }
+    })
         .then(function (response) {
-            var i,
-                pages = response.data;
-            for (i = 0; i < pages.length; i = i + 1) {
-                if (pages[i].title === "Forside") {
-                    $scope.page = pages[i];
-                }
-            }
+           $scope.page = response.data;
         });
 });
