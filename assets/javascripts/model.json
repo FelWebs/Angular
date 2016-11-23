@@ -1,18 +1,6 @@
 [
   {
-    "firstName": "Mikkel",
-    "lastName": "Olsen"
-  },
-  {
-    "firstName": "Michael",
-    "lastName": "Stöier"
-  },
-  {
-    "firstName": "Marc",
-    "lastName": "Og Camilla = Loooove"
-  },
-  {
-    "firstName": "Harry Mother",
-    "lastName": "Fucking Potter!"
+    "title": "Forside",
+    "content": "<p>Lorem Ipsum</p><img src='http://placehold.it/200x200'>"
   }
 ]
