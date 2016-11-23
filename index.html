@@ -11,13 +11,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
     <script src="assets/javascripts/angularapp.js"></script>
 </head>
-<body>
-    <div ng-app="myApp" ng-controller="myCtrl">
-        <p ng-repeat="name in names">{{ name.firstName + " " + name.lastName }}</p>
+<body ng-app="myApp">
+    <header>
+        <h1>Brians Angularbiks</h1>
+    </header>
+    <nav>
+        <ul>
+            <li a ui-sref="forside">Forside</li>
+            <li a ui-sref="kontakt">Kontakt</li>
+        </ul>
+    </nav>
+    <div ng-view>
+
     </div>
 
-<script>
-
-</script>
+<footer>
+    <article>
+        <address>
+            Brians Angularbiks<br>
+            Angularbiksvej 42<br>
+            1000 Angularovreby
+        </address>
+    </article>
+</footer>
 </body>
 </html>
